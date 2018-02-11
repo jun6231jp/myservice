@@ -1,0 +1,16 @@
+#!/usr/bin/expect
+
+set ID "root"
+set IP "IPaddress"
+set PW "rootpassword"
+
+set timeout 10
+
+spawn env LANG=C ssh ${ID}@${IP}
+
+expect ":"
+send "${PW}\n"
+expect "#"
+send "shutdown -h -f now & exit\n"
+expect "$"
+interact
