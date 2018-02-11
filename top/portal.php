@@ -70,7 +70,7 @@ if (!$_SESSION['name']){
     if($serviceid >= 100){
 	echo <<< EOM
 	<p>
-	<input type="submit" class="sw" id="denken" value="資格" onClick="location.href='shikaku/'"></input>
+	<input type="submit" class="sw" id="shikaku" value="資格" onClick="location.href='shikaku/'"></input>
 	</p>
 	
 	EOM;
