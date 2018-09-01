@@ -22,7 +22,7 @@ if ($_POST['name'] != "" && strlen($_POST['name']) < 20){
 	$username=$row['username'];
 	if($username!=""){
 	    $data = $username." created successfully!";
-	    shell_exec("echo {$_POST['name']} | mail -s user_addition a.miki.21.29.0232@gmail.com");
+	    shell_exec("echo {$_POST['name']} | mail -s user_addition user@domain.com");
 	    $sql = "insert into servicelist (username, serviceid) values (\"{$_POST['name']}\", 0)";
 	    $result = mysql_query($sql);
 	    if($result){
