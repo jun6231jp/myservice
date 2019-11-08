@@ -1,6 +1,6 @@
 #!/usr/bin/perl --
 
-$ret=system ("/home/user/wol.sh > /home/httpd/msg");
+$ret=system ("sh /home/user/wol.sh > /home/httpd/msg");
 if ($ret == 0) {
 print "Content-type: text/html\n\n";
 print "<html>\n";
