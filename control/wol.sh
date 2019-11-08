@@ -1,6 +1,8 @@
 #!/bin/bash
 
 sudo etherwake MACaddress -i wlan0
+sudo etherwake MACaddress -i wlan0
+sudo etherwake MACaddress -i wlan0
 
 for i in {0..30}
 do
