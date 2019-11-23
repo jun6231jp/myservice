@@ -1,16 +1,11 @@
 #!/bin/bash
 
-sudo etherwake MACaddress -i wlan0
-sudo etherwake MACaddress -i wlan0
-sudo etherwake MACaddress -i wlan0
-
-for i in {0..30}
-do
- ret=`ping -c 1 IPaddress | grep "1 received"`
+sudo etherwake 30:5A:3A:56:34:41 -i wlan0
+sudo etherwake 30:5A:3A:56:34:41 -i wlan0
+sudo etherwake 30:5A:3A:56:34:41 -i wlan0
+ ret=`ping -c 1 192.168.11.11 | grep "1 received"`
  if [ "$ret" != "" ]; then
   exit 0
+ else
+  exit 1
  fi
- sleep 3s
-done
-
-exit 1
